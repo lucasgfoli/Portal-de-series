@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de séries</title>
-    
-    <!-- Link para o CSS do Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9a8Kd8saVXnZg8yzGmcEdtOPQXO1z9ErlTz44KnFJkD4zJ3JzVZ3miZTzEvFZnTl" crossorigin="anonymous">
+    <title>Portal de Séries - WatchIt</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Incluindo o Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <div class="cabecalho">
+        <!-- Logo à esquerda -->
         <div class="logo">
             <img src="img/a7b8046c-1487-43f4-bad3-8a7a82e7b1e1.jpg" alt="Logotipo">
         </div>
+
+        <!-- Título centralizado -->
         <div class="titulo">
             <h1>WatchIt</h1>
         </div>
+
+        <!-- Botão do menu à direita -->
         <div class="menu">
             <button class="open-btn" onclick="toggleMenu()">☰</button>
         </div>
     </div>
 
+    <!-- Menu lateral -->
     <div id="side-menu" class="side-menu">
         <button class="close-btn" onclick="toggleMenu()">×</button>
         <ul>
@@ -32,13 +38,10 @@
         </ul>
     </div>
 
+    <!-- Carrossel de filmes -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <!-- Os indicadores serão preenchidos dinamicamente -->
-        </div>
-        <div class="carousel-inner">
-            <!-- Os itens do carrossel serão preenchidos dinamicamente -->
-        </div>
+        <div class="carousel-indicators"></div> <!-- Indicadores do carrossel -->
+        <div class="carousel-inner" id="carouselInner"></div> <!-- Itens do carrossel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -49,10 +52,29 @@
         </button>
     </div>
 
-    <!-- Script do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-oP9GQSOZtPaJlAsjkMi6D5slFw6yfmXsJlJ8vnNkdYZlmGnlU52tMfg2ZK46CChC" crossorigin="anonymous"></script>
-    
-    <!-- Script personalizado para abrir e fechar o menu -->
+    <!-- Cards de filmes -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="card-container" style= "background-color: hsl(208.09deg 95.92% 9.61%);"></div>
+
+    <div class="minibio">
+        <h1>Informações do autor:</h1>
+        <h2>Nome: Lucas Gabriel Fernandes Oliveira</h2>
+        <p>
+            - Aluno do curso de Análise e desenvolvimento de Sistemas na PUC Minas Barreiro. <br>
+            - Nascido em 2006 na cidade de Belo Horizonte. <br>
+            - Formou o Ensino Médio em 2023. <br>
+            - Iniciou o curso em Agosto de 2024. <br>
+            
+            <div class="redes">
+                <img src="img/linkedin.png" alt="Linkedin" class="linkedin"> <a href="linkedin.com/in/lucas-gabriel-fernandes-oliveira-1680642a9">Linkedin</a>>
+                <img src="img/github.jpg" alt="Github" class="github"> <a href="https://github.com/Lucf77">Github</a>
+            </div>
+        </p>
+    </div>
+
+    <!-- Script para o menu lateral -->
     <script src="script.js"></script>
+    <!-- Incluindo o Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

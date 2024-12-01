@@ -1,22 +1,33 @@
-const apiKey = "a58f10581863c369f194754e7ff135de";
+
+// Função para abrir e fechar o menu lateral
+function toggleMenu() {
+    const menu = document.getElementById('side-menu');
+    if (menu.style.width === '0px' || menu.style.width === '') {
+        menu.style.width = '250px'; // Abre o menu
+    } else {
+        menu.style.width = '0'; // Fecha o menu
+    }
+}
+
+// Chave de API para TMDb
+const apiKey = "a58f10581863c369f194754e7ff135de";  // Sua chave de API
 const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc`; // URL para buscar filmes populares
-const apiUrlTV = `https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc`; // URL para buscar séries populares
 
 // Função para preencher o carrossel com filmes
 async function fetchMovies() {
     try {
-        // Buscar filmes
+
         const response = await fetch(apiUrl);
         const data = await response.json();
         const movies = data.results;
 
-        // Carregar o carrossel
-        const carouselInner = document.querySelector('.carousel-inner');
+        const carouselInner = document.querySelector('#carouselInner');
         const carouselIndicators = document.querySelector('.carousel-indicators');
+        const cardContainer = document.getElementById('card-container');
         carouselInner.innerHTML = ''; // Limpa o carrossel antes de adicionar novos itens
         carouselIndicators.innerHTML = ''; // Limpa os indicadores
+        cardContainer.innerHTML = ''; // Limpa os cards antes de adicionar novos itens
 
-        // Adiciona cada filme ao carrossel
         movies.forEach((movie, index) => {
             const isActive = index === 0 ? 'active' : ''; // A primeira imagem será ativa
             const movieImageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -32,59 +43,30 @@ async function fetchMovies() {
             `;
             carouselInner.innerHTML += carouselItem;
 
-            // Criando os indicadores para cada slide
+
             const indicator = `
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="${isActive}" aria-current="true" aria-label="Slide ${index + 1}"></button>
             `;
             carouselIndicators.innerHTML += indicator;
+
+            const cardHTML = `
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="${movieImageUrl}" class="card-img-top" alt="${movie.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${movie.title}</h5>
+                            <p class="card-text">${movie.overview}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            `;
+            cardContainer.innerHTML += cardHTML;
         });
     } catch (error) {
         console.error("Erro ao buscar filmes:", error);
     }
 }
-
-// Função para preencher o carrossel com séries
-async function fetchTVShows() {
-    try {
-        // Buscar séries
-        const response = await fetch(apiUrlTV);
-        const data = await response.json();
-        const tvShows = data.results;
-
-        // Carregar o carrossel
-        const carouselInner = document.querySelector('.carousel-inner');
-        const carouselIndicators = document.querySelector('.carousel-indicators');
-        carouselInner.innerHTML = ''; // Limpa o carrossel antes de adicionar novos itens
-        carouselIndicators.innerHTML = ''; // Limpa os indicadores
-
-        // Adiciona cada série ao carrossel
-        tvShows.forEach((show, index) => {
-            const isActive = index === 0 ? 'active' : ''; // A primeira imagem será ativa
-            const showImageUrl = `https://image.tmdb.org/t/p/w500${show.poster_path}`;
-
-            const carouselItem = `
-                <div class="carousel-item ${isActive}">
-                    <img src="${showImageUrl}" class="d-block w-100" alt="${show.name}">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>${show.name}</h5>
-                        <p>${show.overview}</p>
-                    </div>
-                </div>
-            `;
-            carouselInner.innerHTML += carouselItem;
-
-            // Criando os indicadores para cada slide
-            const indicator = `
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="${isActive}" aria-current="true" aria-label="Slide ${index + 1}"></button>
-            `;
-            carouselIndicators.innerHTML += indicator;
-        });
-    } catch (error) {
-        console.error("Erro ao buscar séries:", error);
-    }
-}
-
-// Chama as funções para buscar filmes ou séries
 fetchMovies();
-// Ou se quiser buscar séries, basta descomentar a linha abaixo
-// fetchTVShows();
