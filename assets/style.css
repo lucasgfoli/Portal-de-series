@@ -1,0 +1,55 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(208.7deg 100% 9.02%);
+}
+
+/* Cabeçalho */
+.cabecalho {
+    align-items: center;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cabecalho .titulo {
+    color: white;
+}
+
+.cabecalho .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho img {
+    width: 152px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.cabecalho .menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.open-btn {
+    font-size: 50px;
+    background-color: hsl(209, 94%, 19%);
+    color: white;
+    border-radius: 20%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Menu lateral */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 
+}
