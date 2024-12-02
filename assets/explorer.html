@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer - WatchIt</title>
+    <link rel="stylesheet" href="explorer.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="cabecalho">
+        <!-- Logo à esquerda -->
+        <div class="logo">
+            <img src="img/a7b8046c-1487-43f4-bad3-8a7a82e7b1e1.jpg" alt="Logotipo">
+        </div>
+
+        <!-- Título centralizado -->
+        <div class="titulo">
+            <h1>WatchIt</h1>
+        </div>
+
+        <!-- Botão do menu à direita -->
+        <div class="menu">
+            <button class="open-btn" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+
+    <!-- Menu lateral -->
+    <div id="side-menu" class="side-menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <ul>
+            <li><a href="portal.html">Home</a></li>
+            <li><a href="explorer.html">Explorador</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Filtro de pesquisa -->
+    <div class="search-container">
+        <input type="text" id="searchInput" class="form-control" placeholder="Buscar por filmes ou séries" />
+        <button id="searchBtn" class="btn btn-primary" onclick="searchMovies()">Buscar</button>
+    </div>
+
+    <!-- Container de Cards de Filmes -->
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="card-container"></div>
+    </div>
+
+    <script src="explorer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

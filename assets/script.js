@@ -1,11 +1,17 @@
-
-// Função para abrir e fechar o menu lateral
+// Função para abrir/fechar o menu lateral
 function toggleMenu() {
     const menu = document.getElementById('side-menu');
-    if (menu.style.width === '0px' || menu.style.width === '') {
-        menu.style.width = '250px'; // Abre o menu
+    const body = document.body;
+
+    // Verifica o estado do menu para alternar entre aberto e fechado
+    if (menu.style.right === '0px') {
+        // Fecha o menu
+        menu.style.right = '-250px';
+        body.classList.remove('menu-open');
     } else {
-        menu.style.width = '0'; // Fecha o menu
+        // Abre o menu
+        menu.style.right = '0';
+        body.classList.add('menu-open');
     }
 }
 

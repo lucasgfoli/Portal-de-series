@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:  hsl(208, 37%, 70%);
+    background-color:  hsl(208.09deg 95.92% 9.61%);
     
 }
 
@@ -45,47 +45,50 @@ body {
 
 /* Menu lateral */
 .side-menu {
-    height: 100%;
-    width: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor escura para o menu lateral */
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-    z-index: 1;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Usando a mesma cor de fundo */
+    color: white;
+    transition: right 0.3s ease;
+    padding-top: 50px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .side-menu ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .side-menu li {
-    padding: 8px 16px;
-    text-align: left;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .side-menu a {
-    color: white; /* Cor do texto dos links */
+    color: white;
     text-decoration: none;
+    font-size: 18px;
     display: block;
+    padding: 10px;
 }
 
 .side-menu a:hover {
-    background-color: #575757; /* Cor de fundo ao passar o mouse */
+    background-color: #333;
 }
 
+/* Botão de fechar menu */
 .close-btn {
-    font-size: 36px;
-    position: absolute;
-    top: 0;
-    right: 25px;
+    font-size: 30px;
     color: white;
     background: none;
     border: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
     cursor: pointer;
 }
 
@@ -176,65 +179,73 @@ body {
   .carousel-dark .carousel-control-icon {
     filter: invert(1) grayscale(100); /* $carousel-dark-control-icon-filter */
   }
-/* Estilizando o contêiner do card */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
 .card {
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo do card (escura) */
-    border: 1px solid hsl(188.22deg 98.37% 51.96%); /* Cor de borda em verde-azulado */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição suave */
-    height: 100%;
-    padding: 10px; /* Adiciona um pequeno espaçamento interno */
-    cursor: pointer;
-
+    width: 18rem;
+    margin: 15px;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    border-radius: 8px;
+    overflow: hidden;
 }
-
-/* Efeito de hover no card: aumenta de tamanho */
+/* Efeito de escala no card */
 .card:hover {
-    transform: scale(1.05); /* Aumenta o card para 105% */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o cursor */
+    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+    transition: transform 0.3s ease-in-out; /* Faz a transição suave */
+    cursor: pointer;
 }
 
-/* Estilizando a imagem do card */
 .card-img-top {
-    border-top-left-radius: 10px; /* Arredonda o canto superior esquerdo da imagem */
-    border-top-right-radius: 10px; /* Arredonda o canto superior direito da imagem */
-    height: 200px; /* Define uma altura fixa para a imagem */
-    object-fit: cover; /* Faz a imagem cobrir todo o espaço sem distorcer */
-    width: 100%; /* A imagem ocupa toda a largura do card */
+    width: 100%;
+    height: auto;
 }
 
-/* Estilizando o corpo do card */
 .card-body {
     padding: 15px;
-    color: #140f0f; /* Texto dentro do corpo do card em branco */
 }
 
-/* Estilizando o título do card */
 .card-title {
-    font-size: 1.25rem;
+    font-size: 18px;
     font-weight: bold;
-    color: hsl(188.22deg 98.37% 51.96%); /* Título em verde-azulado */
-    margin-bottom: 10px; /* Espaçamento inferior */
+    color: white;
 }
 
-/* Estilizando o texto do card */
 .card-text {
-    color: #ddd; /* Texto em cinza claro para o conteúdo */
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 14px;
+    color: #000000; /* Cor mais clara para o texto do card */
 }
 
-/* Estilizando o rodapé do card */
+/* Responsividade */
+@media (max-width: 768px) {
+    .search-container input {
+        width: 70%;
+    }
+
+    .search-container button {
+        width: 25%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .card-footer {
     background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura do rodapé */
     color: #aaa; /* Texto mais claro para o rodapé */
     font-size: 0.9rem;
-    padding: 10px;
+    padding: 8px;
     text-align: right; /* Alinha o texto à direita */
 }
 .minibio 
 {
+  padding-top: 50px;
   color: white;
   background-color: hsl(208.09deg 95.92% 9.61%); ;
 }
@@ -269,3 +280,4 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+

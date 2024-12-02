@@ -1,0 +1,172 @@
+/* Geral */
+body {
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+}
+
+.cabecalho .logo img {
+    width: 150px; /* Define o tamanho da imagem */
+    height: auto; /* Define a altura da imagem */
+    border-radius: 50%; /* Faz a logo circular */
+}
+
+.cabecalho .titulo {
+    flex-grow: 1; /* O título ocupa o maior espaço disponível */
+    text-align: center; /* Centraliza o título */
+    color: white; /* Cor do texto */
+}
+
+.cabecalho .menu button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menu lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Usando a mesma cor de fundo */
+    color: white;
+    transition: right 0.3s ease;
+    padding-top: 50px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+.side-menu a:hover {
+    background-color: #333;
+}
+
+/* Botão de fechar menu */
+.close-btn {
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+/* Filtro de pesquisa */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.search-container input {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #0069d9; /* Cor azul para o botão */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3; /* Cor mais escura para o hover */
+}
+
+/* Cards de filmes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    width: 18rem;
+    margin: 15px;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* Efeito de escala no card */
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+    transition: transform 0.3s ease-in-out; /* Faz a transição suave */
+    cursor: pointer;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #ccc; /* Cor mais clara para o texto do card */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .search-container input {
+        width: 70%;
+    }
+
+    .search-container button {
+        width: 25%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
