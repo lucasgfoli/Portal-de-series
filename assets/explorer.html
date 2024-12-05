@@ -9,17 +9,12 @@
 <body>
     <!-- Cabeçalho -->
     <div class="cabecalho">
-        <!-- Logo à esquerda -->
         <div class="logo">
-            <img src="img/a7b8046c-1487-43f4-bad3-8a7a82e7b1e1.jpg" alt="Logotipo">
+            <img src="img/logo.jpg" alt="Logotipo">
         </div>
-
-        <!-- Título centralizado -->
         <div class="titulo">
             <h1>WatchIt</h1>
         </div>
-
-        <!-- Botão do menu à direita -->
         <div class="menu">
             <button class="open-btn" onclick="toggleMenu()">☰</button>
         </div>
@@ -44,7 +39,9 @@
 
     <!-- Container de Cards de Filmes -->
     <div class="container mt-4">
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="card-container"></div>
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="card-container">
+            <!-- Os filmes serão exibidos aqui -->
+        </div>
     </div>
 
     <script src="explorer.js"></script>

@@ -1,0 +1,113 @@
+/* Geral */
+body {
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+}
+
+.cabecalho .logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%; /* Faz a logo circular */
+}
+
+.cabecalho .titulo {
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+}
+
+.cabecalho .menu button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Detalhes do filme */
+#movie-details {
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+    margin-top: 20px;
+}
+
+.movie-card {
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.movie-card h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.movie-card p {
+    font-size: 18px;
+    color: #ccc; /* Cor mais clara para o texto */
+    margin-bottom: 10px;
+}
+
+.movie-card p strong {
+    font-weight: bold;
+    color: white;
+}
+
+/* Botões de navegação */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0069d9; /* Cor azul */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Cor mais escura para o hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #movie-details {
+        flex-direction: column;
+    }
+
+    .movie-card {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .movie-card h2 {
+        font-size: 28px;
+    }
+
+    .movie-card p {
+        font-size: 16px;
+    }
+}
