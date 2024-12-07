@@ -42,9 +42,57 @@ async function getMovieDetails() {
                 <p><strong>Descrição:</strong> ${overview}</p>
             </div>
         `;
+
+        // Chama a função para obter o elenco do filme
+        getMovieCast(movieId);
+
     } catch (error) {
         console.error("Erro ao buscar detalhes do filme:", error);
         alert('Erro ao carregar detalhes do filme. Tente novamente mais tarde.');
+    }
+}
+
+// Função para buscar o elenco do filme
+async function getMovieCast(movieId) {
+    const apiKey = 'a58f10581863c369f194754e7ff135de'; // Sua chave da API
+    const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=pt-BR`; // URL da API para buscar o elenco
+
+    try {
+        // Realiza a requisição para buscar o elenco
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        // Verifica se o elenco foi encontrado
+        if (!data.cast || data.cast.length === 0) {
+            alert('Elenco não encontrado!');
+            return;
+        }
+
+        // Preenche a seção de elenco na página
+        const castContainer = document.getElementById('cast-container');
+        let castCards = '';
+
+        data.cast.forEach(actor => {
+            const actorName = actor.name || 'Nome não disponível';
+            const actorImage = actor.profile_path ? `https://image.tmdb.org/t/p/w500${actor.profile_path}` : 'https://via.placeholder.com/150x225?text=Imagem+Indisponível';
+            
+            castCards += `
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="${actorImage}" class="card-img-top" alt="${actorName}">
+                        <div class="card-body">
+                            <h5 class="card-title">${actorName}</h5>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        castContainer.innerHTML = castCards; // Adiciona os cards ao container
+
+    } catch (error) {
+        console.error("Erro ao buscar elenco do filme:", error);
+        alert('Erro ao carregar elenco do filme. Tente novamente mais tarde.');
     }
 }
 

@@ -7,8 +7,47 @@
     <link rel="stylesheet" href="detalhes.css">
 </head>
 <body>
-    <div id="movie-details"></div> <!-- Este é o local onde os detalhes do filme aparecerão -->
+
+        <!-- Cabeçalho -->
+        <div class="cabecalho">
+            <!-- Logo à esquerda -->
+            <div class="logo">
+                <img src="img/a7b8046c-1487-43f4-bad3-8a7a82e7b1e1.jpg" alt="Logotipo">
+            </div>
     
-    <script src="detalhes.js"></script> <!-- Script para buscar os detalhes -->
+            <!-- Título centralizado -->
+            <div class="titulo">
+                <h1>WatchIt</h1>
+            </div>
+    
+            <!-- Botão do menu à direita -->
+            <div class="menu">
+                <button class="open-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    
+        <!-- Menu lateral -->
+        <div id="side-menu" class="side-menu">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <ul>
+                <li><a href="portal.html">Home</a></li>
+                <li><a href="explorer.html">Explorador</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+
+    <div id="movie-details"></div>
+
+<div class="secao2 mt-5">
+    <h2>Elenco</h2>
+    <div class="row" id="cast-container">
+    </div>
+</div>
+
+
+    
+    
+    <script src="detalhes.js"></script>
 </body>
 </html>

@@ -111,3 +111,132 @@ body {
         font-size: 16px;
     }
 }
+
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens nas extremidades */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 10px 20px;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor escura do cabeçalho */
+    padding-bottom: 30px;
+}
+
+.cabecalho .logo img {
+    width: 150px; /* Define o tamanho da imagem */
+    height: auto; /* Define a altura da imagem */
+    border-radius: 50%; /* Faz a logo circular */
+}
+
+.cabecalho .titulo {
+    flex-grow: 1; /* O título ocupa o maior espaço disponível */
+    text-align: center; /* Centraliza o título */
+    color: white; /* Cor do texto */
+}
+
+.cabecalho .menu {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão do menu à direita */
+}
+
+.open-btn {
+    font-size: 30px;
+    background-color: transparent; /* Fundo transparente para o botão */
+    color: white; /* Cor branca para o ícone do menu */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Menu lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: hsl(208.09deg 95.92% 9.61%); /* Usando a mesma cor de fundo */
+    color: white;
+    transition: right 0.3s ease;
+    padding-top: 50px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+.side-menu a:hover {
+    background-color: #333;
+}
+
+/* Botão de fechar menu */
+.close-btn {
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.secao2 {
+    padding: 40px 0;
+    background-color: hsl(208.09deg 95.92% 9.61%);
+    border-radius: 8px;
+}
+
+.secao2 h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-size: xx-large;
+}
+
+.card {
+    border: none; /* Remover borda padrão do card */
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 38px;
+    align-items: center;
+}
+
+.card img {
+    width: 150px; /* Reduzir o tamanho das imagens */
+    height: 225px; /* Definir uma altura fixa para as imagens */
+    object-fit: cover; /* Garantir que a imagem seja cortada de forma adequada */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+}
+
+.card-body {
+    padding: 10px; /* Ajusta o padding para dar mais espaço ao texto */
+}
+
+.card-title {
+    font-size: 18px; /* Aumenta o tamanho da fonte do nome do personagem */
+    font-weight: bold;
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.card-text {
+    font-size: 14px; /* Reduz o tamanho do texto do papel do personagem */
+    color: #666;
+}
