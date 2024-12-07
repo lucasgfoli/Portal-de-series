@@ -15,14 +15,12 @@ function toggleMenu() {
     }
 }
 
-// Chave de API para TMDb
-const apiKey = "a58f10581863c369f194754e7ff135de";  // Sua chave de API
-const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc`; // URL para buscar filmes populares
-
-// Função para preencher o carrossel com filmes
+// Função para carregar os dados de filmes
 async function fetchMovies() {
+    const apiKey = "a58f10581863c369f194754e7ff135de";  // Sua chave de API
+    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc`; // URL para buscar filmes populares
+    
     try {
-
         const response = await fetch(apiUrl);
         const data = await response.json();
         const movies = data.results;
@@ -49,7 +47,6 @@ async function fetchMovies() {
             `;
             carouselInner.innerHTML += carouselItem;
 
-
             const indicator = `
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${index}" class="${isActive}" aria-current="true" aria-label="Slide ${index + 1}"></button>
             `;
@@ -75,4 +72,35 @@ async function fetchMovies() {
         console.error("Erro ao buscar filmes:", error);
     }
 }
-fetchMovies();
+
+// Função para carregar dados do autor (podendo vir de JSON ou outra API)
+async function carregarDadosAutor() {
+    const apiUrl = 'https://62e26831-fda1-4aa4-8b08-67f51fcbf6f3-00-1p5kj3rjtz911.picard.replit.dev/usuario';  // URL da API
+
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();  // Obtém os dados em formato JSON
+
+        // Preenche as informações do autor com os dados retornados
+        document.getElementById('autorNome').innerText = `Nome: ${data.name}`;         // Use "name" para o nome
+        document.getElementById('curso').innerText = `Curso: ${data.course}`;         // Use "course" para o curso
+        document.getElementById('email').innerText = `Email: ${data.email}`;         // Use "email"
+        document.getElementById('Instagram').innerText = `Instagram: ${data.Instagram}`; // Use "Instagram"
+        document.getElementById('Github').innerText = `Github: ${data.Github}`;         // Use "Github"
+        document.getElementById('descricao').innerText = `Descrição: ${data.description}`; // Use "description"
+        document.getElementById('id').innerText = `ID: ${data.id}`;                     // Use "id"
+    } catch (error) {
+        console.error("Erro ao carregar dados do autor:", error);
+    }
+}
+
+// Chama a função assim que o conteúdo da página for carregado
+document.addEventListener('DOMContentLoaded', function () {
+    carregarDadosAutor();  // Carrega e exibe os dados do autor
+});
+
+// Chama as funções quando a página carregar
+window.onload = () => {
+    fetchMovies();
+    carregarDadosAutor();  // Carregar os dados do autor
+};
