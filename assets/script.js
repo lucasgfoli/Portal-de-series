@@ -72,44 +72,6 @@ async function fetchMovies() {
     }
 }
 
-// URL da API no Replit (substitua pela URL real da sua API)
-const apiUrl = "https://62e26831-fda1-4aa4-8b08-67f51fcbf6f3-00-1p5kj3rjtz911.picard.replit.dev/usuarios";  // Ajuste para o seu caminho real
-
-// Função para buscar as informações do autor
-function fetchAutorInfo() {
-    const requestOptions = {
-        method: 'GET',  // Usando o método GET
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
-
-    fetch(apiUrl, requestOptions)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Erro na requisição: ${response.statusText}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Log para verificar a resposta da API
-            console.log("Resposta da API:", data);
-
-            // Preenche os campos com as informações do autor
-            document.getElementById('autorName').textContent = data.name || 'Nome não encontrado';
-            document.getElementById('curso').textContent = "Curso: " + (data.course || 'Curso não encontrado');
-            document.getElementById('email').textContent = "Email: " + (data.email || 'Email não encontrado');
-            document.getElementById('Instagram').textContent = "Instagram: " + (data.instagram || 'Instagram não encontrado');
-            document.getElementById('Github').textContent = "GitHub: " + (data.github || 'GitHub não encontrado');
-            document.getElementById('descricao').textContent = data.description || 'Descrição não encontrada';
-            document.getElementById('id').textContent = "ID: " + (data.id || 'ID não encontrado');
-        })
-        .catch(error => {
-            console.error("Erro ao buscar as informações do autor:", error);
-            document.getElementById('autorName').textContent = "Erro ao carregar as informações.";
-        });
-}
-
 // Chama as funções quando a página carregar
 fetchMovies();
-fetchAutorInfo();  // Chama a função correta para carregar os dados do autor
+
