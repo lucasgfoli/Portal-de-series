@@ -1,25 +1,23 @@
-/* Geral */
 body {
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
 }
 
 .cabecalho .logo img {
     width: 150px;
     height: auto;
-    border-radius: 50%; /* Faz a logo circular */
+    border-radius: 50%;
 }
 
 .cabecalho .titulo {
@@ -37,7 +35,6 @@ body {
     cursor: pointer;
 }
 
-/* Página de Favoritos */
 .favoritos-page {
     padding: 40px 20px;
     background-color: hsl(208.09deg 95.92% 9.61%);
@@ -50,7 +47,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Container de filmes favoritos */
 #favorites-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -58,7 +54,7 @@ body {
 }
 
 .favorite-card {
-    background-color: hsl(208.09deg 95.92% 12%); /* Um tom mais escuro de fundo */
+    background-color: hsl(208.09deg 95.92% 12%);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -68,7 +64,7 @@ body {
 }
 
 .favorite-card:hover {
-    transform: translateY(-10px); /* Efeito de elevação */
+    transform: translateY(-10px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
 }
 
@@ -90,11 +86,10 @@ body {
     color: #bbb;
 }
 
-/* Botão para voltar */
 .back-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0069d9; /* Cor azul */
+    background-color: #0069d9;
     border: none;
     color: white;
     border-radius: 5px;
@@ -106,10 +101,9 @@ body {
 }
 
 .back-button:hover {
-    background-color: #0056b3; /* Cor mais escura para o hover */
+    background-color: #0056b3;
 }
 
-/* Menu Lateral */
 .side-menu {
     position: fixed;
     top: 0;
@@ -146,7 +140,6 @@ body {
     background-color: #333;
 }
 
-/* Botão de fechar menu */
 .close-btn {
     font-size: 30px;
     color: white;
@@ -158,7 +151,6 @@ body {
     cursor: pointer;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     #favorites-container {
         grid-template-columns: 1fr 1fr;
@@ -166,21 +158,22 @@ body {
     }
 
     .favorite-card img {
-        height: 180px; /* Ajusta o tamanho da imagem */
+        height: 180px;
     }
 }
-h1 
-{
+
+h1 {
     display: flex;
     justify-content: center;
     color: azure;
     font-size: xx-large;
-}/* Remove o sublinhado e a cor azul dos links */
+}
+
 .cabecalho .titulo a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: white; /* Define a cor do texto como branco */
+    text-decoration: none;
+    color: white;
 }
 
 .cabecalho .logo a {
-    text-decoration: none; /* Remove o sublinhado da logo */
+    text-decoration: none;
 }

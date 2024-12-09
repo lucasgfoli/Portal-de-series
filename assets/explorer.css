@@ -1,31 +1,29 @@
-/* Geral */
 body {
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
 }
 
 .cabecalho .logo img {
-    width: 150px; /* Define o tamanho da imagem */
-    height: auto; /* Define a altura da imagem */
-    border-radius: 50%; /* Faz a logo circular */
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
 }
 
 .cabecalho .titulo {
-    flex-grow: 1; /* O título ocupa o maior espaço disponível */
-    text-align: center; /* Centraliza o título */
-    color: white; /* Cor do texto */
+    flex-grow: 1;
+    text-align: center;
+    color: white;
     text-decoration: none;
 }
 
@@ -37,14 +35,13 @@ body {
     cursor: pointer;
 }
 
-/* Menu lateral */
 .side-menu {
     position: fixed;
     top: 0;
     right: -250px;
     width: 250px;
     height: 100%;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Usando a mesma cor de fundo */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     color: white;
     transition: right 0.3s ease;
     padding-top: 50px;
@@ -74,7 +71,6 @@ body {
     background-color: #333;
 }
 
-/* Botão de fechar menu */
 .close-btn {
     font-size: 30px;
     color: white;
@@ -86,7 +82,6 @@ body {
     cursor: pointer;
 }
 
-/* Filtro de pesquisa */
 .search-container {
     display: flex;
     justify-content: center;
@@ -103,7 +98,7 @@ body {
 
 .search-container button {
     padding: 10px 20px;
-    background-color: #0069d9; /* Cor azul para o botão */
+    background-color: #0069d9;
     border: none;
     color: white;
     border-radius: 5px;
@@ -111,10 +106,9 @@ body {
 }
 
 .search-container button:hover {
-    background-color: #0056b3; /* Cor mais escura para o hover */
+    background-color: #0056b3;
 }
 
-/* Cards de filmes */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -125,14 +119,14 @@ body {
 .card {
     width: 18rem;
     margin: 15px;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     border-radius: 8px;
     overflow: hidden;
 }
-/* Efeito de escala no card */
+
 .card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
-    transition: transform 0.3s ease-in-out; /* Faz a transição suave */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -153,10 +147,9 @@ body {
 
 .card-text {
     font-size: 14px;
-    color: #ccc; /* Cor mais clara para o texto do card */
+    color: #ccc;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .search-container input {
         width: 70%;
@@ -171,12 +164,12 @@ body {
         align-items: center;
     }
 }
-/* Remove o sublinhado e a cor azul dos links */
+
 .cabecalho .titulo a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: white; /* Define a cor do texto como branco */
+    text-decoration: none;
+    color: white;
 }
 
 .cabecalho .logo a {
-    text-decoration: none; /* Remove o sublinhado da logo */
+    text-decoration: none;
 }

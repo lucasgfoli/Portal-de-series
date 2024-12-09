@@ -1,293 +1,277 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:  hsl(208.09deg 95.92% 9.61%);
-    
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(208.09deg 95.92% 9.61%);
+
 }
 
-/* Cabeçalho */
 .cabecalho {
-    display: flex;
-    justify-content: space-between; /* Alinha os itens nas extremidades */
-    align-items: center; /* Alinha os itens verticalmente */
-    padding: 10px 20px;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor escura do cabeçalho */
-    padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: hsl(208.09deg 95.92% 9.61%);
+  padding-bottom: 30px;
 }
 
 .cabecalho .logo img {
-    width: 150px; /* Define o tamanho da imagem */
-    height: auto; /* Define a altura da imagem */
-    border-radius: 50%; /* Faz a logo circular */
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
 }
 
 .cabecalho .titulo {
-    flex-grow: 1; /* O título ocupa o maior espaço disponível */
-    text-align: center; /* Centraliza o título */
-    color: white; /* Cor do texto */
-    text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  color: white;
+  text-decoration: none;
 }
 
 .cabecalho .menu {
-    display: flex;
-    justify-content: flex-end; /* Alinha o botão do menu à direita */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .open-btn {
-    font-size: 30px;
-    background-color: transparent; /* Fundo transparente para o botão */
-    color: white; /* Cor branca para o ícone do menu */
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+  font-size: 30px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
-/* Menu lateral */
 .side-menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Usando a mesma cor de fundo */
-    color: white;
-    transition: right 0.3s ease;
-    padding-top: 50px;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: hsl(208.09deg 95.92% 9.61%);
+  color: white;
+  transition: right 0.3s ease;
+  padding-top: 50px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .side-menu ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .side-menu li {
-    text-align: center;
-    margin: 20px 0;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .side-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
 }
 
 .side-menu a:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
-/* Botão de fechar menu */
 .close-btn {
-    font-size: 30px;
-    color: white;
-    background: none;
-    border: none;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    cursor: pointer;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
 }
 
-/* Carrossel */
 .carousel-inner img {
-    height: 600px; /* Ajuste a altura das imagens do carrossel */
-    object-fit: cover; /* Faz as imagens cobrir todo o espaço do carrossel */
+  height: 600px;
+  object-fit: cover;
 }
 
 
 
 .carousel-caption h5 {
-    color: white; /* Cor do texto no carrossel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a legibilidade */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .carousel-caption p {
-    color: white; /* Cor do parágrafo no carrossel */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Controle do Carrossel */
 .carousel-control {
-    color: white; /* $carousel-control-color */
-    width: 15%; /* $carousel-control-width */
-    opacity: 0.5; /* $carousel-control-opacity */
-    transition: opacity 0.15s ease; /* $carousel-control-transition */
-  }
-  
-  .carousel-control:hover {
-    opacity: 0.9; /* $carousel-control-hover-opacity */
-  }
-  
-  /* Indicadores do Carrossel */
-  .carousel-indicator {
-    width: 30px; /* $carousel-indicator-width */
-    height: 3px; /* $carousel-indicator-height */
-    /* Definindo a altura da área de clique */
-    height: 10px; /* $carousel-indicator-hit-area-height */
-    margin-right: 3px; /* $carousel-indicator-spacer */
-    opacity: 0.5; /* $carousel-indicator-opacity */
-    transition: opacity 0.6s ease; /* $carousel-indicator-transition */
-  }
-  
-  .carousel-indicator.active {
-    background-color: white; /* $carousel-indicator-active-bg */
-    opacity: 1; /* $carousel-indicator-active-opacity */
-  }
-  
-  /* Legenda do Carrossel */
-  .carousel-caption {
-    width: 70%; /* $carousel-caption-width */
-    color: white; /* $carousel-caption-color */
-    padding-top: 1.25rem; /* $carousel-caption-padding-y */
-    padding-bottom: 1.25rem; /* $carousel-caption-padding-y */
-    margin-bottom: 1.25rem; /* $carousel-caption-spacer */
-  }
-  
-  /* Ícones de Controle */
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    width: 2rem; /* $carousel-control-icon-width */
-    
-  }
-  
-  .carousel-control-prev-icon {
-    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
-  }
-  
-  .carousel-control-next-icon {
-    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
-  }
-  
-  /* Transições do Carrossel */
-  .carousel {
-    transition: transform 0.6s ease-in-out; /* $carousel-transition */
-  }
-  
-  /* Estilo para o modo escuro */
-  .carousel-dark .carousel-indicator.active {
-    background-color: black; /* $carousel-dark-indicator-active-bg */
-  }
-  
-  .carousel-dark .carousel-caption {
-    color: black; /* $carousel-dark-caption-color */
-  }
-  
-  .carousel-dark .carousel-control-icon {
-    filter: invert(1) grayscale(100); /* $carousel-dark-control-icon-filter */
-  }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+  color: white;
+  width: 15%;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.carousel-control:hover {
+  opacity: 0.9;
+}
+
+.carousel-indicator {
+  width: 30px;
+  height: 3px;
+  height: 10px;
+  margin-right: 3px;
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
+}
+
+.carousel-indicator.active {
+  background-color: white;
+  opacity: 1;
+}
+
+.carousel-caption {
+  width: 70%;
+  color: white;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2rem;
+}
+
+.carousel-control-prev-icon {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+}
+
+.carousel-control-next-icon {
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
+
+.carousel {
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-dark .carousel-indicator.active {
+  background-color: black;
+}
+
+.carousel-dark .carousel-caption {
+  color: black;
+}
+
+.carousel-dark .carousel-control-icon {
+  filter: invert(1) grayscale(100);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .card {
-    width: 18rem;
-    margin: 15px;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
-    border-radius: 8px;
-    overflow: hidden;
+  width: 18rem;
+  margin: 15px;
+  background-color: hsl(208.09deg 95.92% 9.61%);
+  border-radius: 8px;
+  overflow: hidden;
 }
-/* Efeito de escala no card */
+
 .card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
-    transition: transform 0.3s ease-in-out; /* Faz a transição suave */
-    cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .card-img-top {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .card-body {
-    padding: 15px;
+  padding: 15px;
 }
 
 .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
 }
 
 .card-text {
-    font-size: 14px;
-    color: #000000; /* Cor mais clara para o texto do card */
+  font-size: 14px;
+  color: #000000;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
-    .search-container input {
-        width: 70%;
-    }
+  .search-container input {
+    width: 70%;
+  }
 
-    .search-container button {
-        width: 25%;
-    }
+  .search-container button {
+    width: 25%;
+  }
 
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .card-footer {
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura do rodapé */
-    color: #aaa; /* Texto mais claro para o rodapé */
-    font-size: 0.9rem;
-    padding: 8px;
-    text-align: right; /* Alinha o texto à direita */
+  background-color: hsl(208.09deg 95.92% 9.61%);
+  color: #aaa;
+  font-size: 0.9rem;
+  padding: 8px;
+  text-align: right;
 }
-.minibio 
-{
+
+.minibio {
   padding-top: 50px;
   color: white;
-  background-color: hsl(208.09deg 95.92% 9.61%); ;
+  background-color: hsl(208.09deg 95.92% 9.61%);
+  ;
 }
-.redes .github 
-{
+
+.redes .github {
   width: 160px;
   height: auto;
   border-radius: 50%;
 }
 
-.redes .linkedin 
-{
+.redes .linkedin {
   width: 160px;
   height: auto;
   border-radius: 50%;
 }
 
-.redes 
-{
+.redes {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
 }
 
-.redes a
-{
+.redes a {
   padding: 10px;
   font-weight: bold;
-  font-size:xxx-large;
+  font-size: xxx-large;
   color: #ddd;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Remove o sublinhado e a cor azul dos links */
 .cabecalho .titulo a {
-  text-decoration: none; /* Remove o sublinhado */
-  color: white; /* Define a cor do texto como branco */
+  text-decoration: none;
+  color: white;
 }
 
 .cabecalho .logo a {
-  text-decoration: none; /* Remove o sublinhado da logo */
+  text-decoration: none;
 }

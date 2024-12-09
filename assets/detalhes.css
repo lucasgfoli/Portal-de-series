@@ -1,25 +1,23 @@
-/* Geral */
 body {
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
 }
 
 .cabecalho .logo img {
     width: 150px;
     height: auto;
-    border-radius: 50%; /* Faz a logo circular */
+    border-radius: 50%;
 }
 
 .cabecalho .titulo {
@@ -36,7 +34,6 @@ body {
     cursor: pointer;
 }
 
-/* Detalhes do filme */
 #movie-details {
     display: flex;
     justify-content: center;
@@ -45,7 +42,7 @@ body {
 }
 
 .movie-card {
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor de fundo escura */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     width: 100%;
     max-width: 800px;
     border-radius: 8px;
@@ -68,7 +65,7 @@ body {
 
 .movie-card p {
     font-size: 18px;
-    color: #ccc; /* Cor mais clara para o texto */
+    color: #ccc;
     margin-bottom: 10px;
 }
 
@@ -77,11 +74,10 @@ body {
     color: white;
 }
 
-/* Botões de navegação */
 .back-button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #0069d9; /* Cor azul */
+    background-color: #0069d9;
     border: none;
     color: white;
     border-radius: 5px;
@@ -89,10 +85,9 @@ body {
 }
 
 .back-button:hover {
-    background-color: #0056b3; /* Cor mais escura para o hover */
+    background-color: #0056b3;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     #movie-details {
         flex-direction: column;
@@ -112,51 +107,48 @@ body {
     }
 }
 
-
-/* Cabeçalho */
 .cabecalho {
     display: flex;
-    justify-content: space-between; /* Alinha os itens nas extremidades */
-    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Cor escura do cabeçalho */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     padding-bottom: 30px;
 }
 
 .cabecalho .logo img {
-    width: 150px; /* Define o tamanho da imagem */
-    height: auto; /* Define a altura da imagem */
-    border-radius: 50%; /* Faz a logo circular */
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
 }
 
 .cabecalho .titulo {
-    flex-grow: 1; /* O título ocupa o maior espaço disponível */
-    text-align: center; /* Centraliza o título */
-    color: white; /* Cor do texto */
+    flex-grow: 1;
+    text-align: center;
+    color: white;
 }
 
 .cabecalho .menu {
     display: flex;
-    justify-content: flex-end; /* Alinha o botão do menu à direita */
+    justify-content: flex-end;
 }
 
 .open-btn {
     font-size: 30px;
-    background-color: transparent; /* Fundo transparente para o botão */
-    color: white; /* Cor branca para o ícone do menu */
+    background-color: transparent;
+    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
 }
 
-/* Menu lateral */
 .side-menu {
     position: fixed;
     top: 0;
     right: -250px;
     width: 250px;
     height: 100%;
-    background-color: hsl(208.09deg 95.92% 9.61%); /* Usando a mesma cor de fundo */
+    background-color: hsl(208.09deg 95.92% 9.61%);
     color: white;
     transition: right 0.3s ease;
     padding-top: 50px;
@@ -186,7 +178,6 @@ body {
     background-color: #333;
 }
 
-/* Botão de fechar menu */
 .close-btn {
     font-size: 30px;
     color: white;
@@ -212,7 +203,7 @@ body {
 }
 
 .card {
-    border: none; /* Remover borda padrão do card */
+    border: none;
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 38px;
@@ -220,70 +211,68 @@ body {
 }
 
 .card img {
-    width: 150px; /* Reduzir o tamanho das imagens */
-    height: 225px; /* Definir uma altura fixa para as imagens */
-    object-fit: cover; /* Garantir que a imagem seja cortada de forma adequada */
-    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .card-body {
-    padding: 10px; /* Ajusta o padding para dar mais espaço ao texto */
+    padding: 10px;
 }
 
 .card-title {
-    font-size: 18px; /* Aumenta o tamanho da fonte do nome do personagem */
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 10px; /* Espaçamento superior */
+    margin-top: 10px;
 }
 
 .card-text {
-    font-size: 14px; /* Reduz o tamanho do texto do papel do personagem */
+    font-size: 14px;
     color: #666;
 }
-/* Container para centralizar o botão */
+
 .favoritar-container {
-    display: flex; /* Usamos o Flexbox para centralizar o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Garante que o container ocupe toda a altura da tela */
-    position: relative; /* Para garantir que o container ocupe toda a tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
 }
 
-/* Estilo do Botão Favoritar */
+
 #favorito {
-    background-color: #0069d9; /* Cor azul de fundo */
-    color: white; /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
-    padding: 12px 25px; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Aponta o cursor para indicar que é clicável */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Animações suaves */
+    background-color: #0069d9;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efeito de hover */
+
 #favorito:hover {
-    background-color: #0056b3; /* Cor azul mais escura */
-    transform: scale(1.05); /* Aumenta o botão ligeiramente */
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-/* Efeito de clique */
 #favorito:active {
-    background-color: #004085; /* Cor ainda mais escura no clique */
-    transform: scale(0.98); /* Leve redução no tamanho para indicar pressionamento */
+    background-color: #004085;
+    transform: scale(0.98);
 }
 
-/* Botão desabilitado */
 #favorito:disabled {
-    background-color: #999; /* Cor cinza para botão desabilitado */
-    cursor: not-allowed; /* Altera o cursor para indicar que não é clicável */
+    background-color: #999;
+    cursor: not-allowed;
 }
-/* Remove o sublinhado e a cor azul dos links */
+
 .cabecalho .titulo a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: white; /* Define a cor do texto como branco */
+    text-decoration: none;
+    color: white;
 }
 
 .cabecalho .logo a {
-    text-decoration: none; /* Remove o sublinhado da logo */
+    text-decoration: none;
 }

@@ -1,46 +1,41 @@
-// Função para abrir/fechar o menu lateral
 function toggleMenu() {
     const menu = document.getElementById('side-menu');
     const body = document.body;
 
-    // Verifica o estado do menu para alternar entre aberto e fechado
     if (menu.style.right === '0px') {
-        // Fecha o menu
+
         menu.style.right = '-250px';
         body.classList.remove('menu-open');
     } else {
-        // Abre o menu
+
         menu.style.right = '0';
         body.classList.add('menu-open');
     }
 }
 
 async function getMovieDetails() {
-    // Obtém os parâmetros da URL
-    const params = new URLSearchParams(window.location.search);
-    const movieId = params.get('id'); // Obtém o ID do filme
 
-    // Verifica se o ID do filme foi passado na URL
+    const params = new URLSearchParams(window.location.search);
+    const movieId = params.get('id'); 
+
     if (!movieId) {
         alert('ID do filme não encontrado!');
         return;
     }
 
-    const apiKey = 'a58f10581863c369f194754e7ff135de'; // Sua chave da API
-    const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=pt-BR`; // URL da API para detalhes do filme
+    const apiKey = 'a58f10581863c369f194754e7ff135de'; 
+    const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=pt-BR`;
 
     try {
-        // Realiza a requisição para buscar os detalhes do filme
+
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        // Verifica se a resposta da API contém os dados do filme
         if (!data || data.status_code === 34) {
             alert('Filme não encontrado!');
             return;
         }
-
-        // Preencher os detalhes na página
+a
         const movieDetails = document.getElementById('movie-details');
         const imageUrl = data.poster_path ? `https://image.tmdb.org/t/p/w500${data.poster_path}` : 'https://via.placeholder.com/500x750?text=Imagem+Indisponível';
         const title = data.title || 'Sem título';
@@ -48,7 +43,6 @@ async function getMovieDetails() {
         const releaseDate = data.release_date || 'Data não disponível';
         const genre = data.genres.map(g => g.name).join(', ') || 'Gênero não disponível';
 
-        // Atualiza o HTML da página com os detalhes do filme
         movieDetails.innerHTML = `
             <div class="movie-card">
                 <img src="${imageUrl}" alt="${title}" class="movie-poster">
@@ -59,7 +53,6 @@ async function getMovieDetails() {
             </div>
         `;
 
-        // Chama a função para obter o elenco do filme
         getMovieCast(movieId);
 
     } catch (error) {
@@ -68,23 +61,20 @@ async function getMovieDetails() {
     }
 }
 
-// Função para buscar o elenco do filme
 async function getMovieCast(movieId) {
     const apiKey = 'a58f10581863c369f194754e7ff135de'; // Sua chave da API
-    const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=pt-BR`; // URL da API para buscar o elenco
+    const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=pt-BR`; 
 
     try {
-        // Realiza a requisição para buscar o elenco
+
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        // Verifica se o elenco foi encontrado
         if (!data.cast || data.cast.length === 0) {
             alert('Elenco não encontrado!');
             return;
         }
 
-        // Preenche a seção de elenco na página
         const castContainer = document.getElementById('cast-container');
         let castCards = '';
 
@@ -104,7 +94,7 @@ async function getMovieCast(movieId) {
             `;
         });
 
-        castContainer.innerHTML = castCards; // Adiciona os cards ao container
+        castContainer.innerHTML = castCards; 
 
     } catch (error) {
         console.error("Erro ao buscar elenco do filme:", error);
@@ -112,5 +102,4 @@ async function getMovieCast(movieId) {
     }
 }
 
-// Chama a função para obter os detalhes ao carregar a página
 window.onload = getMovieDetails;

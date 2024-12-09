@@ -1,23 +1,23 @@
-// Função para abrir/fechar o menu lateral
+
 function toggleMenu() {
     const menu = document.getElementById('side-menu');
     const body = document.body;
 
-    // Verifica o estado do menu para alternar entre aberto e fechado
+
     if (menu.style.right === '0px') {
-        // Fecha o menu
+
         menu.style.right = '-250px';
         body.classList.remove('menu-open');
     } else {
-        // Abre o menu
+
         menu.style.right = '0';
         body.classList.add('menu-open');
     }
 }
 
 async function fetchMovies() {
-    const apiKey = "a58f10581863c369f194754e7ff135de";  // Sua chave de API
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc`; // URL para buscar filmes populares
+    const apiKey = "a58f10581863c369f194754e7ff135de"; 
+    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc`; 
     
     try {
         const response = await fetch(apiUrl);
@@ -27,12 +27,12 @@ async function fetchMovies() {
         const carouselInner = document.querySelector('#carouselInner');
         const carouselIndicators = document.querySelector('.carousel-indicators');
         const cardContainer = document.getElementById('card-container');
-        carouselInner.innerHTML = ''; // Limpa o carrossel antes de adicionar novos itens
-        carouselIndicators.innerHTML = ''; // Limpa os indicadores
-        cardContainer.innerHTML = ''; // Limpa os cards antes de adicionar novos itens
+        carouselInner.innerHTML = '';
+        carouselIndicators.innerHTML = '';
+        cardContainer.innerHTML = ''; 
 
         movies.forEach((movie, index) => {
-            const isActive = index === 0 ? 'active' : ''; // A primeira imagem será ativa
+            const isActive = index === 0 ? 'active' : '';
             const movieImageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
             const carouselItem = `
@@ -72,6 +72,5 @@ async function fetchMovies() {
     }
 }
 
-// Chama as funções quando a página carregar
 fetchMovies();
 
