@@ -26,6 +26,7 @@ body {
     flex-grow: 1; /* O título ocupa o maior espaço disponível */
     text-align: center; /* Centraliza o título */
     color: white; /* Cor do texto */
+    text-decoration: none;
 }
 
 .cabecalho .menu button {
@@ -169,4 +170,13 @@ body {
         flex-direction: column;
         align-items: center;
     }
+}
+/* Remove o sublinhado e a cor azul dos links */
+.cabecalho .titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: white; /* Define a cor do texto como branco */
+}
+
+.cabecalho .logo a {
+    text-decoration: none; /* Remove o sublinhado da logo */
 }

@@ -1,4 +1,20 @@
-// Função para buscar detalhes do filme e exibir na página
+// Função para abrir/fechar o menu lateral
+function toggleMenu() {
+    const menu = document.getElementById('side-menu');
+    const body = document.body;
+
+    // Verifica o estado do menu para alternar entre aberto e fechado
+    if (menu.style.right === '0px') {
+        // Fecha o menu
+        menu.style.right = '-250px';
+        body.classList.remove('menu-open');
+    } else {
+        // Abre o menu
+        menu.style.right = '0';
+        body.classList.add('menu-open');
+    }
+}
+
 async function getMovieDetails() {
     // Obtém os parâmetros da URL
     const params = new URLSearchParams(window.location.search);

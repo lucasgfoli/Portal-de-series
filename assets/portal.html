@@ -11,34 +11,37 @@
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <div class="cabecalho">
-        <!-- Logo à esquerda -->
-        <div class="logo">
+<!-- Cabeçalho -->
+<div class="cabecalho">
+    <!-- Logo à esquerda, agora envolvida em um link -->
+    <div class="logo">
+        <a href="portal.html">
             <img src="img/a7b8046c-1487-43f4-bad3-8a7a82e7b1e1.jpg" alt="Logotipo">
-        </div>
+        </a>
+    </div>
 
-        <!-- Título centralizado -->
-        <div class="titulo">
+    <!-- Título centralizado, agora envolvido em um link -->
+    <div class="titulo">
+        <a href="portal.html">
             <h1>WatchIt</h1>
-        </div>
-
-        <!-- Botão do menu à direita -->
-        <div class="menu">
-            <button class="open-btn" onclick="toggleMenu()">☰</button>
-        </div>
+        </a>
     </div>
 
-    <!-- Menu lateral -->
-    <div id="side-menu" class="side-menu">
-        <button class="close-btn" onclick="toggleMenu()">×</button>
-        <ul>
-            <li><a href="portal.html">Home</a></li>
-            <li><a href="explorer.html">Explorador</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
+    <!-- Botão do menu à direita -->
+    <div class="menu">
+        <button class="open-btn" onclick="toggleMenu()">☰</button>
     </div>
+</div>
+
+<!-- Menu lateral -->
+<div id="side-menu" class="side-menu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <ul>
+        <li><a href="portal.html">Home</a></li>
+        <li><a href="explorer.html">Explorador</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+    </ul>
+</div>
 
     <!-- Carrossel de filmes -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="padding-bottom: 80px;
@@ -61,17 +64,17 @@
     <div class="row row-cols-1 row-cols-md-3 g-4" id="card-container"
         style="background-color: hsl(208.09deg 95.92% 9.61%);"></div>
 
-        <div class="minibio">
-            <h1>Informações do autor -</h1>
-            
-            <p id="autorName"></p>
-            <p id="curso"></p>
-            <p id="email"></p>
-            <p id="Instagram"></p>
-            <p id="Github"></p>
-            <p id="descricao"></p>
-            <p id="id"></p>
-        </div>
+    <div class="minibio">
+        <h1>Informações do autor</h1>
+        <div id="autorName"></div>
+        <div id="curso"></div>
+        <div id="email"></div>
+        <div id="Instagram"></div>
+        <div id="Github"></div>
+        <div id="descricao"></div>
+        <div id="id"></div>
+        
+    </div>
         
     <script src="script.js"></script>
     <script src="usuario.js"></script>

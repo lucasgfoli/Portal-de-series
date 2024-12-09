@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Filme</title>
-    <link rel="stylesheet" href="detalhes.css">
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="favoritos.css">
 </head>
 <body>
-
-      <!-- Cabeçalho -->
+    
+    <!-- Cabeçalho -->
 <div class="cabecalho">
     <!-- Logo à esquerda, agora envolvida em um link -->
     <div class="logo">
@@ -41,20 +41,9 @@
 </div>
 
 
-    <div id="movie-details"></div>     <!-- Botão para Favoritar -->
-    <div class="favoritar">
-       <button id="favorito" onclick="addToFavorites()">Favoritar</button>
-    </div>
-    
+    <h1>Filmes favoritos:</h1>
 
-
-<div class="secao2 mt-5">
-    <h2>Elenco</h2>
-    <div class="row" id="cast-container">
-    </div>
-</div>
-
+    <div id="favorites-container"></div>
     <script src="favoritos.js"></script>
-    <script src="detalhes.js"></script>
 </body>
 </html>
