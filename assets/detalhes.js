@@ -62,7 +62,7 @@ a
 }
 
 async function getMovieCast(movieId) {
-    const apiKey = 'a58f10581863c369f194754e7ff135de'; // Sua chave da API
+    const apiKey = 'a58f10581863c369f194754e7ff135de'; 
     const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=pt-BR`; 
 
     try {

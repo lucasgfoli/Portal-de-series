@@ -1,9 +1,9 @@
-const apiUrl = "https://9608c490-b62a-45b1-9057-ff212b7ad74a-00-aylbp3mbq1mq.worf.replit.dev/usuario";  // A URL da API (localmente está rodando na porta 3000)
+const apiUrl = "http://localhost:3000/usuario";  //API 
 
 
 function fetchAutorInfo() {
     const requestOptions = {
-        method: 'GET', 
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
@@ -17,9 +17,9 @@ function fetchAutorInfo() {
             return response.json();
         })
         .then(data => {
-
             console.log("Resposta da API:", data);
 
+            // Exibindo as informações retornadas da API no HTML
             document.getElementById('autorName').textContent = "Nome: " + (data.name || 'Nome não encontrado');
             document.getElementById('curso').textContent = "Curso: " + (data.course || 'Curso não encontrado');
             document.getElementById('email').textContent = "Email: " + (data.email || 'Email não encontrado');
@@ -36,4 +36,4 @@ function fetchAutorInfo() {
         });
 }
 
-fetchAutorInfo();
+fetchAutorInfo();  // Chama a função para carregar os dados na inicialização da página
