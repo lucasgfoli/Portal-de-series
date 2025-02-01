@@ -19,7 +19,6 @@ function fetchAutorInfo() {
         .then(data => {
             console.log("Resposta da API:", data);
 
-            // Exibindo as informações retornadas da API no HTML
             document.getElementById('autorName').textContent = "Nome: " + (data.name || 'Nome não encontrado');
             document.getElementById('curso').textContent = "Curso: " + (data.course || 'Curso não encontrado');
             document.getElementById('email').textContent = "Email: " + (data.email || 'Email não encontrado');
@@ -36,4 +35,4 @@ function fetchAutorInfo() {
         });
 }
 
-fetchAutorInfo();  // Chama a função para carregar os dados na inicialização da página
+fetchAutorInfo();
