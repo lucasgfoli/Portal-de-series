@@ -1,54 +1,59 @@
-# 🎬 Portal de Séries
+# Portal de Séries
 
-**Portal de Séries** é uma aplicação web que permite explorar séries e filmes, visualizar detalhes e gerenciar seus favoritos. Ideal como projeto de aprendizado em desenvolvimento web, com integração de API e estrutura moderna de frontend.
-
----
-
-## 🚀 Como Usar
-
-### 🔍 Explorar Séries e Filmes  
-Use a aba **"Explorador"** para pesquisar e navegar pelas séries e filmes disponíveis.
-
-### ⭐ Adicionar aos Favoritos (Em desenvolvimento)
-Na página de detalhes de uma série ou filme, clique em **"Adicionar aos Favoritos"** para salvá-lo na sua lista personalizada.
-
-### 📁 Ver Meus Favoritos (Em desenvolvimento)
-Acesse a aba **"Favoritos"** para ver todos os títulos que você adicionou.
+**Portal de Séries** é uma aplicação web onde você pode explorar filmes e séries, adicionar aos favoritos e visualizar detalhes de cada título.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🌐 Acessar o Site
 
-- **HTML5** → Estruturação da interface  
-- **CSS3** → Estilização customizada e responsiva  
-- **JavaScript (ES6+)** → Lógica do aplicativo, requisições HTTP e manipulação do DOM  
-- **Node.js + Express** → Backend leve para simulação de API REST
-- **GitHub Codespaces** → Ambiente de desenvolvimento baseado em nuvem
+Você pode acessar o **Portal de Séries** diretamente pelo seguinte link:
+
+🔗 [Acesse o Portal de Séries](https://lucasgfoli.github.io/Portal-de-series/assets/portal.html)
 
 ---
 
-## 🧪 Funcionalidades
+## 🧾 Descrição
 
-- Exploração dinâmica de títulos usando API
-- Página de detalhes com imagem, descrição e botão de favorito
-- Menu lateral com toggle responsivo
+Este projeto tem como objetivo permitir que os usuários explorem filmes e séries, vejam detalhes de cada título e adicionem os favoritos para facilitar o acesso posterior.
 
 ---
 
-## 🌐 Acesse o Projeto
+## 🛠️ Como Usar
 
-💻 Repositório no GitHub: [lucasgfoli/Portal-de-series](https://github.com/lucasgfoli/Portal-de-series)
+### ➕ Adicionar aos Favoritos (Em desenvolvomento)
+Clique no botão **"Adicionar aos Favoritos"** para incluir o filme ou série na sua lista de favoritos.
+
+### 🎬 Explorar Filmes e Séries  
+Acesse a página de **Explorar** para ver todas as opções de filmes e séries, podendo filtrá-los por categorias ou palavras-chave.
+
+### 👀 Visualizar Detalhes  
+Clique em um filme ou série para ver mais informações, como o título, sinopse e pôster.
+
+---
+
+## 🛠️ Tecnologias Usadas
+
+- **HTML5** → Estrutura da página  
+- **CSS3** → Estilização da interface  
+- **JavaScript** → Lógica da aplicação, manipulação do DOM e requisições para a API  
+- **API Externa** → Responsável pela gestão dos filmes e séries (via `fetch`)
+
+---
+
+## 📂 Projeto no GitHub
+
+Você pode acessar o código do projeto no GitHub:
+
+🔗 [Acesse o repositório no GitHub](https://github.com/lucasgfoli/Portal-de-series)  
 
 ---
 
 ## 🤝 Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para sugerir melhorias ou novas funcionalidades.
+Contribuições são bem-vindas! Se você encontrou um bug ou tem alguma sugestão de melhoria, siga os passos abaixo:
 
-1. Faça um **fork** deste repositório  
-2. Crie uma **branch** para sua feature ou correção  
-3. Faça o **commit** de suas mudanças  
-4. Envie um **push** para seu fork  
+1. Faça um **fork** do repositório  
+2. Crie uma **branch** para sua funcionalidade ou correção  
+3. **Commit** as mudanças  
+4. Envie um **push** para o seu fork  
 5. Abra um **pull request** para o repositório principal
-
----
