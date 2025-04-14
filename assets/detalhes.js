@@ -35,7 +35,6 @@ async function getMovieDetails() {
             alert('Filme não encontrado!');
             return;
         }
-a
         const movieDetails = document.getElementById('movie-details');
         const imageUrl = data.poster_path ? `https://image.tmdb.org/t/p/w500${data.poster_path}` : 'https://via.placeholder.com/500x750?text=Imagem+Indisponível';
         const title = data.title || 'Sem título';
