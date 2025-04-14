@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Portal-de-series/1.0.0": {
+        "runtime": {
+          "Portal-de-series.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Portal-de-series/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/workspaces/Portal-de-series/bin/Debug/net8.0/Portal-de-series
+/workspaces/Portal-de-series/bin/Debug/net8.0/Portal-de-series.deps.json
+/workspaces/Portal-de-series/bin/Debug/net8.0/Portal-de-series.runtimeconfig.json
+/workspaces/Portal-de-series/bin/Debug/net8.0/Portal-de-series.dll
+/workspaces/Portal-de-series/bin/Debug/net8.0/Portal-de-series.pdb
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.AssemblyInfoInputs.cache
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.AssemblyInfo.cs
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.csproj.CoreCompileInputs.cache
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.sourcelink.json
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.dll
+/workspaces/Portal-de-series/obj/Debug/net8.0/refint/Portal-de-series.dll
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.pdb
+/workspaces/Portal-de-series/obj/Debug/net8.0/Portal-de-series.genruntimeconfig.cache
+/workspaces/Portal-de-series/obj/Debug/net8.0/ref/Portal-de-series.dll
